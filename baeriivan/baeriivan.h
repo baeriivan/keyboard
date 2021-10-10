@@ -3,7 +3,7 @@
 #include QMK_KEYBOARD_H
 
 /* #include "combos.h" */
-/* #include "unicode.h" */
+#include "unicode.h"
 #include "wrapper.h"
 
 #ifdef TAP_DANCE_ENABLE

@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "baeriivan.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LAYOUT(
@@ -19,9 +20,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     LAYOUT(
         KC_GRV , KC_F1  , KC_F2   , KC_F3   , KC_F4  , KC_F5  , KC_F6  , KC_F7  , KC_F8   , KC_F9  , KC_F10 , KC_F11 , KC_F12 , XXXXXXX, KC_DEL,
-        _______, _______, UC(0xe9), UC(0xe9), _______, _______, _______, _______, _______ , _______, _______, _______, _______, RESET  ,
-        _______, _______, _______ , _______ , _______, _______, KC_LEFT, KC_DOWN, KC_UP   , KC_RGHT, _______, _______, _______,
-        _______, _______, KC_HOME , UC(0xc7), _______, _______, _______, _______, UC(0xb5), _______, _______, _______, _______, XXXXXXX,
+        _______, E_CIRC , E_GRAV  , E_ACUT  , _______, _______, _______, U_ACUT , I_ACUT  , O_ACUT , _______, _______, _______, RESET  ,
+        _______, A_ACUT , _______ , _______ , _______, _______, KC_LEFT, KC_DOWN, KC_UP   , KC_RGHT, _______, _______, _______,
+        _______, _______, KC_HOME , C_CDIL  , _______, _______, _______, _______, MICRO   , _______, _______, _______, _______, XXXXXXX,
         _______, _______, _______ ,                    _______, _______, _______,           _______, _______, XXXXXXX, _______, _______
     )
 };
+
+__attribute__ ((weak))
+void matrix_init_keymap(void) {}
+
+void matrix_init_user(void) {
+    set_unicode_input_mode(UC_LNX);
+
+    matrix_init_keymap();
+}
+
+ 
