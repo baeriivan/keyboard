@@ -17,6 +17,6 @@ Built from the repo [`https://github.com/jombo-jon/Keyboard/`](`https://github.c
 
 ## TODO
 
-- [ ] Add unicode for accents and special characters
+- [X] Add unicode for accents and special characters
 - [ ] Clean the repo from old/unused code
 - [ ] Introduce combos, and other fancy stuff

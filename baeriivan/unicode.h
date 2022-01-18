@@ -35,62 +35,64 @@
     M(LPSI,  0x03C8) /* ψ */ \
     M(UOME,  0x03A9) /* Ω */ \
     M(LOME,  0x03C9) /* ω */ \
-    M(A__ACUT    , 0xE1)\
-    M(A__ACUT__U , 0xC1)\
-    M(A__CIRC    , 0xE2)\
-    M(A__CIRC__U , 0xC2)\
-    M(A__GRAV    , 0xE0)\
-    M(A__GRAV__U , 0xC0)\
+    M(A__ACUT    , 0x00E1)\
+    M(A__ACUT__U , 0x00C1)\
+    M(A__CIRC    , 0x00E2)\
+    M(A__CIRC__U , 0x00C2)\
+    M(A__GRAV    , 0x00E0)\
+    M(A__GRAV__U , 0x00C0)\
     M(C__ACUT    , 0x0107)\
     M(C__ACUT__U , 0x0106)\
     M(C__CARO    , 0x010D)\
     M(C__CARO__U , 0x010C)\
-    M(C__CDIL    , 0xE7)\
-    M(C__CDIL__U , 0xC7)\
+    M(C__CDIL    , 0x00E7)\
+    M(C__CDIL__U , 0x00C7)\
     M(D__CARO    , 0x010E)\
     M(D__CARO__U , 0x010F)\
     M(D__STRK    , 0x0111)\
     M(D__STRK__U , 0x0110)\
-    M(E__ACUT    , 0xE9)\
-    M(E__ACUT__U , 0xC9)\
-    M(E__GRAV    , 0xE8)\
-    M(E__GRAV__U , 0xC8)\
-    M(E__CIRC    , 0xEA)\
-    M(E__CIRC__U , 0xCA)\
-    M(I__ACUT    , 0xED)\
-    M(I__ACUT__U , 0xCD)\
-    M(I__CIRC    , 0xEE)\
-    M(I__CIRC__U , 0xCE)\
-    M(I__UML     , 0xEF)\
-    M(I__UML__U  , 0xCF)\
-    M(O__ACUT    , 0xF3)\
-    M(O__ACUT__U , 0xD3)\
+    M(E__ACUT    , 0x00E9)\
+    M(E__ACUT__U , 0x00C9)\
+    M(E__GRAV    , 0x00E8)\
+    M(E__GRAV__U , 0x00C8)\
+    M(E__CIRC    , 0x00EA)\
+    M(E__CIRC__U , 0x00CA)\
+    M(I__ACUT    , 0x00ED)\
+    M(I__ACUT__U , 0x00CD)\
+    M(I__CIRC    , 0x00EE)\
+    M(I__CIRC__U , 0x00CE)\
+    M(I__UML     , 0x00EF)\
+    M(I__UML__U  , 0x00CF)\
+    M(O__ACUT    , 0x00F3)\
+    M(O__ACUT__U , 0x00D3)\
     M(O__DACU    , 0x0151)\
     M(O__DACU__U , 0x0150)\
-    M(O__CIRC    , 0xF4)\
-    M(O__CIRC__U , 0xD4)\
-    M(O__UML     , 0xF6)\
-    M(O__UML__U  , 0xDC)\
-    M(U__ACUT    , 0xF9)\
-    M(U__ACUT__U , 0xD9)\
+    M(O__CIRC    , 0x00F4)\
+    M(O__CIRC__U , 0x00D4)\
+    M(O__UML     , 0x00F6)\
+    M(O__UML__U  , 0x00DC)\
+    M(U__ACUT    , 0x00F9)\
+    M(U__ACUT__U , 0x00D9)\
     M(U__DACU    , 0x0171)\
     M(U__DACU__U , 0x0170)\
-    M(U__CIRC    , 0xFB)\
-    M(U__CIRC__U , 0xDB)\
-    M(U__GRAV    , 0xF9)\
-    M(U__GRAV__U , 0xD9)\
-    M(U__UML     , 0xFC)\
-    M(U__UML__U  , 0xDC)\
+    M(U__CIRC    , 0x00FB)\
+    M(U__CIRC__U , 0x00DB)\
+    M(U__GRAV    , 0x00F9)\
+    M(U__GRAV__U , 0x00D9)\
+    M(U__UML     , 0x00FC)\
+    M(U__UML__U  , 0x00DC)\
     M(S__CARO    , 0x0161)\
     M(S__CARO__U , 0x0160)\
+    M(Z__CARO    , 0x017E)\
+    M(Z__CARO__U , 0x017D)\
+    M(DED__GRAV  , 0x0300)\
     M(DED__ACUT  , 0x0301)\
     M(DED__CIR   , 0x0302)\
-    M(DED__GRAV  , 0x0300)\
     M(DED__UML   , 0x0308)\
     M(DED__DACU  , 0x030B)\
     M(DED__CARO  , 0x030C)\
-    M(DEGREE     , 0xB0)\
-    M(MICRO      , 0xB5)
+    M(DEGREE     , 0x00B0)\
+    M(MICRO      , 0x00B5)
 
 // clang-format on
 
@@ -158,8 +160,12 @@ enum unicode_keycodes {
 #define U_GRAV  XP(U__GRAV, U__GRAV__U)
 #define U_UML   XP(U__UML , U__UML__U )
 #define S_CARO  XP(S__CARO, S__CARO__U)
-#define DED_CIR X(DED__CIR)
-#define DED_UML X(DED__UML)
+#define Z_CARO  XP(Z__CARO, Z__CARO__U)
+#define __GRAV  X(DED__GRAV)
+#define __ACUT  X(DED__ACUT)
+#define __CIR   X(DED__CIR)
+#define __UML   X(DED__UML)
+#define __DACU  X(DED__DACU)
+#define __CARO  X(DED__CARO)
 #define DEGREE  X(DEGREE)
 #define MICRO   X(MICRO)
-

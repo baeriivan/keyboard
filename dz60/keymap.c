@@ -21,13 +21,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LAYOUT(
         KC_GRV , KC_F1  , KC_F2   , KC_F3   , KC_F4  , KC_F5  , KC_F6  , KC_F7  , KC_F8   , KC_F9  , KC_F10 , KC_F11 , KC_F12 , XXXXXXX, KC_DEL,
         _______, E_CIRC , E_GRAV  , E_ACUT  , _______, _______, _______, U_ACUT , I_ACUT  , O_ACUT , _______, _______, _______, _______,
-        _______, A_ACUT , _______ , _______ , _______, _______, KC_LEFT, KC_DOWN, KC_UP   , KC_RGHT, _______, _______, _______,
+        _______, A_ACUT , _______ , D_STRK  , _______, _______, KC_LEFT, KC_DOWN, KC_UP   , KC_RGHT, _______, _______, _______,
         _______, _______, KC_HOME , _______ , C_CDIL , _______, _______, _______, MICRO   , _______, _______, _______, _______, XXXXXXX,
         _______, _______, _______ ,                    _______, _______, _______,           _______, _______, XXXXXXX, _______, _______
     ),
 
     LAYOUT(
-        KC_GRV , UC_M_LN, UC_M_WC , KC_F3   , KC_F4  , KC_F5  , KC_F6  , KC_F7  , KC_F8   , KC_F9  , KC_F10 , KC_F11 , KC_F12 , XXXXXXX, KC_DEL,
+        DEGREE , UC_M_LN, UC_M_WC , KC_F3   , KC_F4  , KC_F5  , KC_F6  , KC_F7  , KC_F8   , KC_F9  , KC_F10 , KC_F11 , KC_F12 , XXXXXXX, KC_DEL,
         _______, _______, _______ , _______ , _______, _______, _______, _______, _______ , _______, _______, _______, _______, _______,
         _______, _______, __UML   , __CIR   , __GRAV , _______, _______, __ACUT , __DACU  , __CARO , _______, _______, _______,
         _______, _______, _______ , _______ , _______, _______, _______, _______, _______ , _______, _______, _______, _______, XXXXXXX,

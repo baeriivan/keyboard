@@ -49,3 +49,6 @@ enum userspace_layers {
 /* #define H LT(_ACCENTS, KC_H) */
 
 /* #define HOME_Z LT(_GREEK, KC_Z) */
+
+#define MOD_SPC LT(3, KC_SPC)
+#define MAGICAP MT(MOD_LCTL, KC_ESC)
