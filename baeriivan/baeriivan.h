@@ -1,16 +1,15 @@
 #pragma once
-
 #include QMK_KEYBOARD_H
 
 /* #include "combos.h" */
-#include "unicode.h"
+// #include "unicode.h"
 #include "wrapper.h"
 
 #ifdef TAP_DANCE_ENABLE
 /* #    include "tapdance.h" */
 #endif
 #if defined(UNICODEMAP_ENABLE) || defined(UNICODE_ENABLE)
-#    include "unicode.h"
+#   include "unicode.h"
 #endif
 
 // Initialize variable holding the binary
@@ -50,5 +49,7 @@ enum userspace_layers {
 
 /* #define HOME_Z LT(_GREEK, KC_Z) */
 
-#define MOD_SPC LT(3, KC_SPC)
+#define MOD_SPC LT(_NAV, KC_SPC)
+#define GAME_SPC KC_SPC
+
 #define MAGICAP MT(MOD_LCTL, KC_ESC)
