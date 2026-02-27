@@ -4,7 +4,7 @@ TAP_DANCE_ENABLE = no     	# Activate tap dance
 
 COMBO_ENABLE = no         	# Enable combos
 NKRO_ENABLE = yes         	# Enable NKRO: any number of key-presses at once
-LTO_ENABLE = yes          	# Enable Link Time Optimization
+LTO_ENABLE = no
 
 EXTRFLAGS += -flto
 

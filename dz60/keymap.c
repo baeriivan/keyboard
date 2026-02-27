@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+
 #include "baeriivan.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -11,31 +12,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, KC_LGUI, KC_LALT,                   MOD_SPC, MOD_SPC, MOD_SPC,          KC_RALT, TG(4),   XXXXXXX, MO(1),   KC_RCTL
     ),
 
-    // 1
+    // 1 - FUNCTIONS
     LAYOUT(
-        KC_GESC, KC__MUTE, KC__VOLDOWN, KC__VOLUP, KC_F4  , KC_BRID, KC_BRIU, KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 , KC_F12 , XXXXXXX, KC_DEL,
-        _______, RGB_TOG , RGB_MOD    , RGB_HUI  , RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, _______, _______, _______, RESET  ,
-        _______, _______ , _______    , _______  , _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______ , _______    , _______  , BL_DEC , BL_TOGG, BL_INC , BL_STEP, _______, _______, _______, _______, _______, XXXXXXX,
-        _______, _______ , _______    ,                     _______, _______, _______,          _______, _______, XXXXXXX, _______, _______
+        KC_ESC,  KC_MUTE, KC_VOLD, KC_VOLU, KC_F4  , KC_BRID, KC_BRIU, KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 , KC_F12 , XXXXXXX, KC_DEL,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, QK_BOOT,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX,
+        _______, _______, _______,                    _______, _______, _______,          _______, _______, XXXXXXX, _______, _______
     ),
 
-    // 2
+    // 2 - ACCENTS/NAVIGATION
     LAYOUT(
         KC_GRV , KC_F1  , KC_F2   , KC_F3   , KC_F4  , KC_F5  , KC_F6  , KC_F7  , KC_F8   , KC_F9  , KC_F10 , KC_F11 , KC_F12 , XXXXXXX, KC_DEL,
-        _______, E_CIRC , E_GRAV  , E_ACUT  , _______, _______, _______, U_ACUT , I_ACUT  , O_ACUT , _______, _______, _______, _______,
-        _______, A_ACUT , _______ , D_STRK  , _______, _______, KC_LEFT, KC_DOWN, KC_UP   , KC_RGHT, _______, _______, _______,
-        _______, _______, KC_HOME , _______ , C_CDIL , _______, _______, _______, MICRO   , _______, _______, _______, _______, XXXXXXX,
-        _______, _______, _______ ,                    _______, _______, _______,           _______, _______, XXXXXXX, _______, _______
+        _______, UC(E__CIRC), UC(E__GRAV), UC(E__ACUT), _______, _______, _______, UC(U__ACUT), UC(I__ACUT), UC(O__ACUT), _______, _______, _______, _______,
+        _______, UC(A__ACUT), _______, UC(D__STRK), _______, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, _______, _______, _______,
+        _______, _______, KC_HOME, _______, UC(C__CDIL), _______, _______, _______, UC(MICRO), _______, _______, _______, _______, XXXXXXX,
+        _______, _______, _______,                    _______, _______, _______,           _______, _______, XXXXXXX, _______, _______
     ),
 
-    // 3
+    // 3 - DIACRITICS
     LAYOUT(
-        DEGREE , UC_M_LN, UC_M_WC , KC_F3   , KC_F4  , KC_F5  , KC_F6  , KC_F7  , KC_F8   , KC_F9  , KC_F10 , KC_F11 , KC_F12 , XXXXXXX, KC_DEL,
-        _______, _______, _______ , _______ , _______, _______, _______, _______, _______ , _______, _______, _______, _______, _______,
-        _______, _______, __UML   , __CIR   , __GRAV , _______, _______, __ACUT , __DACU  , __CARO , _______, _______, _______,
-        _______, _______, _______ , _______ , _______, _______, _______, _______, _______ , _______, _______, _______, _______, XXXXXXX,
-        _______, _______, _______ ,                    _______, _______, _______,           _______, _______, XXXXXXX, _______, _______
+        UC(DEGREE), _______, _______, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, XXXXXXX, KC_DEL,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, UC(UML_DIAER), UC(CIR_CIRC), UC(GRA_GRAV), _______, _______, UC(ACU_ACUT), UC(DAC_DOUBLE), UC(CAR_CARON), _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX,
+        _______, _______, _______,                    _______, _______, _______,           _______, _______, XXXXXXX, _______, _______
     ),
 
     // 4 - GAMING
@@ -53,8 +54,9 @@ __attribute__ ((weak))
 void matrix_init_keymap(void) {}
 
 void matrix_init_user(void) {
-    set_unicode_input_mode(UC_LNX);
+    #if defined(UNICODE_ENABLE) && !defined(KEYMAP_INTROSPECTION_ENABLE)
+        set_unicode_input_mode(UC_LINX);
+    #endif
 
     matrix_init_keymap();
 }
-
