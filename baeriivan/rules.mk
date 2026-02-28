@@ -1,13 +1,13 @@
-SRC += baeriivan.c
-# SRC += tapdance.c
-# SRC += combos.c
-SRC += unicode.c
+# UNICODE_COMMON_ENABLE = yes
+UNICODE_ENABLE = no
+# UNICODE_SELECTED = UC_LNX
+# UNICODEMAP_ENABLE = yes
 
+
+KEYMAP_INTROSPECTION_ENABLE = no
+KEYMAP_INTROSPECTION = no
+
+NKRO_ENABLE = yes
+TAP_DANCE_ENABLE = no
+COMBO_ENABLE = no
 ENCODER_ENABLE = no
-
-UNICODE_ENABLE = yes
-UNICODEMAP_ENABLE = yes
-
-# RGB and Backlight support
-# RGBLIGHT_ENABLE = yes
-# BACKLIGHT_ENABLE = yes

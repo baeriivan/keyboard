@@ -6,17 +6,16 @@ Work in progres ...
 
 See the [official QMK documentation page](`https://docs.qmk.fm/#/newbs_getting_started`)
 
+Place the folder here `qmk_firmare/keyboards/dz60/keymaps/<baeriivan>`
+
 ## Compilation
 
 In the `qmk_firmware` folder, run:  
 `make dz60:baeriivan:dfu`
 
-## Notes
-
-Built from the repo [`https://github.com/jombo-jon/Keyboard/`](`https://github.com/jombo-jon/Keyboard/`), so it might contain useless/wrong stuff for now.
-
 ## TODO
 
-- [X] Add unicode for accents and special characters
-- [ ] Clean the repo from old/unused code
-- [ ] Introduce combos, and other fancy stuff
+- [ ] Re-create a working setup on new QMK
+- [ ] Add `gaming` layout
+- [ ] Add `KC_PSCR` somewhere handy
+- [ ] Update `README.md` for install/update
