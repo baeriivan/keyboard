@@ -6,16 +6,21 @@ Work in progres ...
 
 See the [official QMK documentation page](`https://docs.qmk.fm/#/newbs_getting_started`)
 
-Place the folder here `qmk_firmare/keyboards/dz60/keymaps/<baeriivan>`
+Place the folder `baeriivan` here: `qmk_firmare/keyboards/dz60/keymaps/<baeriivan>` (i.e. where the `qmk_firmware` was installed)
 
 ## Compilation
 
-In the `qmk_firmware` folder, run:  
-`make dz60:baeriivan:dfu`
+In the `qmk_firmware` folder, you might have to use:
+
+- `qmk clean -a`
+- `qmk compile` or (`qmk compile -kb dz60 -km baeriivan`)
+
+and to flash the keyboard:
+- `qmk flash`
+- Press on `MO(_FN) + KC_BSPC` to trigger `KQ_BOOT`
 
 ## TODO
 
-- [ ] Re-create a working setup on new QMK
-- [ ] Add `gaming` layout
-- [ ] Add `KC_PSCR` somewhere handy
-- [ ] Update `README.md` for install/update
+- [X] Re-create a working setup on new QMK
+- [X] Add `gaming` layout
+- [ ] Re-up the handling of accents with unicode
