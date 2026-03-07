@@ -111,94 +111,63 @@ const uint32_t PROGMEM unicode_map[] = {
 
 #ifdef UNICODEMAP_ENABLE
 
-#define ALPHA  X(LALP)
-#define BETA   X(LBET)
-#define GAMMA  X(LGAM)
-#define DELTA  X(LDEL)
-#define EPSLN  X(LEPS)
-#define ETA    X(LETA)
-#define THETA  X(LTHE)
-#define LAMBD  X(LLAM)
-#define GMU    X(LMU)
-#define PI     X(LPI)
-#define RHO    X(LRHO)
-#define SIGMA  X(LSIG)
-#define TAU    X(LTAU)
-#define PHI    X(LPHI)
-#define OMEGA  X(LOME)
+#define ALPHA  UP(LALP, UALP)
+#define BETA   UP(LBET, UBET)
+#define GAMMA  UP(LGAM, UGAM)
+#define DELTA  UP(LDEL, UDEL)
+#define EPSLN  UP(LEPS, UEPS)
+#define ETA    UP(LETA, UETA)
+#define THETA  UP(LTHE, UTHE)
+#define LAMBD  UP(LLAM, ULAM)
+#define GMU    UP(LMU, UMU)
+#define PI     UP(LPI, UPI)
+#define RHO    UP(LRHO, URHO)
+#define SIGMA  UP(LSIG, USIG)
+#define TAU    UP(LTAU, UTAU)
+#define PHI    UP(LPHI, UPHI)
+#define OMEGA  UP(LOME, UOME)
 
-#define A_ACUT  X(A__ACUT)
-#define A_CIRC  X(A__CIRC)
-#define A_GRAV  X(A__GRAV)
+#define A_ACUT  UP(A__ACUT, A__ACUT__U)
+#define A_CIRC  UP(A__CIRC, A__CIRC__U)
+#define A_GRAV  UP(A__GRAV, A__GRAV__U)
 
-#define C_ACUT  X(C__ACUT)
-#define C_CARO  X(C__CARO)
-#define C_CDIL  X(C__CDIL)
+#define C_ACUT  UP(C__ACUT, C__ACUT__U)
+#define C_CARO  UP(C__CARO, C__CARO__U)
+#define C_CDIL  UP(C__CDIL, C__CDIL__U)
 
-#define D_CARO  X(D__CARO)
-#define D_STRK  X(D__STRK)
+#define D_CARO  UP(D__CARO, D__CARO__U)
+#define D_STRK  UP(D__STRK, D__STRK__U)
 
-#define E_ACUT  X(E__ACUT)
-#define E_CIRC  X(E__CIRC)
-#define E_GRAV  X(E__GRAV)
+#define E_ACUT  UP(E__ACUT, E__ACUT__U)
+#define E_CIRC  UP(E__CIRC, E__CIRC__U)
+#define E_GRAV  UP(E__GRAV, E__GRAV__U)
 
-#define I_ACUT  X(I__ACUT)
-#define I_CIRC  X(I__CIRC)
-#define I_UML   X(I__UML)
+#define I_ACUT  UP(I__ACUT, I__ACUT__U)
+#define I_CIRC  UP(I__CIRC, I__CIRC__U)
+#define I_UML   UP(I__UML, I__UML__U)
 
-#define O_ACUT  X(O__ACUT)
-#define O_DACU  X(O__DACU)
-#define O_CIRC  X(O__CIRC)
-#define O_UML   X(O__UML)
+#define O_ACUT  UP(O__ACUT, O__ACUT__U)
+#define O_DACU  UP(O__DACU, O__DACU__U)
+#define O_CIRC  UP(O__CIRC, O__CIRC__U)
+#define O_UML   UP(O__UML, O__UML__U)
 
-#define U_ACUT  X(U__ACUT)
-#define U_DACU  X(U__DACU)
-#define U_CIRC  X(U__CIRC)
-#define U_GRAV  X(U__GRAV)
-#define U_UML   X(U__UML)
+#define U_ACUT  UP(U__ACUT, U__ACUT__U)
+#define U_DACU  UP(U__DACU, U__DACU__U)
+#define U_CIRC  UP(U__CIRC, U__CIRC__U)
+#define U_GRAV  UP(U__GRAV, U__GRAV__U)
+#define U_UML   UP(U__UML, U__UML__U)
 
-#define S_CARO  X(S__CARO)
-#define Z_CARO  X(Z__CARO)
+#define S_CARO  UP(S__CARO, S__CARO__U)
+#define Z_CARO  UP(Z__CARO, Z__CARO__U)
 
-#define E_ACUT_U  X(E__ACUT__U)
-#define E_CIRC_U  X(E__CIRC__U)
-#define E_GRAV_U  X(E__GRAV__U)
+#define DEGREE  UM(DEGREE)
+#define MICRO   UM(MICRO)
 
-#define A_ACUT_U  X(A__ACUT__U)
-#define A_CIRC_U  X(A__CIRC__U)
-#define A_GRAV_U  X(A__GRAV__U)
-
-#define C_ACUT_U  X(C__ACUT__U)
-#define C_CARO_U  X(C__CARO__U)
-#define C_CDIL_U  X(C__CDIL__U)
-
-#define D_CARO_U  X(D__CARO__U)
-#define D_STRK_U  X(D__STRK__U)
-
-#define I_ACUT_U  X(I__ACUT__U)
-#define I_CIRC_U  X(I__CIRC__U)
-#define I_UML_U   X(I__UML__U)
-
-#define O_ACUT_U  X(O__ACUT__U)
-#define O_DACU_U  X(O__DACU__U)
-#define O_CIRC_U  X(O__CIRC__U)
-#define O_UML_U   X(O__UML__U)
-
-#define U_ACUT_U  X(U__ACUT__U)
-#define U_DACU_U  X(U__DACU__U)
-#define U_CIRC_U  X(U__CIRC__U)
-#define U_GRAV_U  X(U__GRAV__U)
-#define U_UML_U   X(U__UML__U)
-
-#define S_CARO_U  X(S__CARO__U)
-#define Z_CARO_U  X(Z__CARO__U)
-
-#define DEGREE  X(DEGREE)
-#define MICRO   X(MICRO)
+#define GRA_GRAV    UM(DED__GRAV)
+#define ACU_ACUT    UM(DED__ACUT)
+#define CIR_CIRC    UM(DED__CIR)
+#define UML_DIAER   UM(DED__UML)
+#define DAC_DOUBLE  UM(DED__DACU)
+#define CAR_CARON   UM(DED__CARO)
 
 #endif
-
-
-void keyboard_post_init_user(void) {
-    set_unicode_input_mode(UNICODE_MODE_LINUX);
-}
