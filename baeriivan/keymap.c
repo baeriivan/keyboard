@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_ACCENTS] = LAYOUT(
-        KC_GRV , KC_F1  , KC_F2   , KC_F3   , KC_F4  , KC_F5  , KC_F6  , KC_F7  , KC_F8   , KC_F9  , KC_F10 , KC_F11 , KC_F12 , XXXXXXX, QK_BOOT,
+        KC_PSCR , KC_F1  , KC_F2   , KC_F3   , KC_F4  , KC_F5  , KC_F6  , KC_F7  , KC_F8   , KC_F9  , KC_F10 , KC_F11 , KC_F12 , XXXXXXX, KC_DELETE,
         _______, E_CIRC, E_GRAV, E_ACUT, _______, _______, _______, U_ACUT, I_ACUT, O_ACUT, _______, _______, _______, UC_NEXT,
         _______, A_ACUT, _______, D_STRK, _______, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, _______, _______, _______,
         _______, _______, KC_HOME, _______, C_CDIL, _______, _______, _______, MICRO, _______, _______, _______, _______, XXXXXXX,
